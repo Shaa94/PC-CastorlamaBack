@@ -1,0 +1,25 @@
+{
+  "name": "api-furnitures",
+  "version": "1.0.0",
+  "description": "An awesome API rest to handle some furnitures",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adatechschool/PC-CastorlamaBack.git"
+  },
+  "author": "CastorLama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adatechschool/PC-CastorlamaBack/issues"
+  },
+  "homepage": "https://github.com/adatechschool/PC-CastorlamaBack#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
