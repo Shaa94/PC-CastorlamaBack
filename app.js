@@ -1,8 +1,8 @@
 const express = require('express')
-const furnitures = require('./mocks/mock-furnitures.js')
-const users = require('./mocks/mock-users.js')
-const commands = require('./mocks/mock-commands.js')
-const favoris = require('./mocks/mock-favoris.js')
+let furnitures = require('./mocks/mock-furnitures.js')
+let users = require('./mocks/mock-users.js')
+let commands = require('./mocks/mock-commands.js')
+let favoris = require('./mocks/mock-favoris.js')
 const { success } = require('./helper.js')
 const { getUniqueId } = require('./helper.js')
 var bodyParser = require('body-parser')
@@ -40,7 +40,13 @@ app.post('/api/furnitures', (req, res) => {
 //Edited a furniture.
 app.put('/api/furnitures/:id', (req, res) => {
   const id = parseInt(req.params.id)
-  const furnitureUpdated = { id: id, ...req.body, edited_at: new Date() }
+  let createdAt
+  furnitures.forEach(furniture => {
+    if (furniture.id === id ) {
+      createdAt = furniture.created_at
+    }
+  });
+  const furnitureUpdated = { id: id, ...req.body, created_at: createdAt, edited_at: new Date() }
   furnitures = furnitures.map(furniture => {
     return furniture.id === id ? furnitureUpdated : furniture
   })
