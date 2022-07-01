@@ -1,16 +1,18 @@
 const express = require('express')
+
 let furnitures = require('./mocks/mock-furnitures.js')
 let users = require('./mocks/mock-users.js')
 let commands = require('./mocks/mock-commands.js')
 let favoris = require('./mocks/mock-favoris.js')
+
 const { success } = require('./helper.js')
 const { getUniqueId } = require('./helper.js')
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser') // Middleware pour transformer les requêtes reçues via Express
 
 const app = express()
 const port = 3000
 
-app.use(bodyParser.json())
+app.use(bodyParser.json()) //Appel bodyParser pour transformer les requêtes reçues par Express en json
 
 app.get('/', (req, res) => res.send('Hello, Express ! 👋'))
 
