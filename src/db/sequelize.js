@@ -33,7 +33,7 @@ const initDb = () => {
         color: furniture.color,
         size: furniture.size,
         accepted: furniture.accepted,
-        image_url: furniture. image_url,
+        image_url: furniture.image_url
       }).then(furniture => console.log(furniture.toJSON()))
     })
     console.log('La base de donnée a bien été initialisée !')
