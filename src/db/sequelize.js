@@ -4,7 +4,7 @@ const furnitures = require('./mock-furniture')
 
 const sequelize = new Sequelize('vente_de_meubles', 'root', '',
   {
-    host: '172.29.16.1', // Mettre localhost ou préciser en fonction de la configuration de votre pc
+    host: 'localhost', // Mettre localhost ou préciser en fonction de la configuration de votre pc
     port: 3306, //Voir n° de port de votre bdd en local.
     dialect: 'mariadb',
     dialectOptions: {
