@@ -2,13 +2,13 @@ const { Sequelize, DataTypes } = require('sequelize')
 const FurnitureModel = require('../models/furniture')
 const furnitures = require('./mock-furniture')
 
-const sequelize = new Sequelize('vente_de_meubles', 'root', '',
+const sequelize = new Sequelize('vente_de_meubles', 'root', 'Blablabla1',
   {
     host: 'localhost', // Mettre localhost ou préciser en fonction de la configuration de votre pc
     port: 3306, //Voir n° de port de votre bdd en local.
     dialect: 'mariadb',
     dialectOptions: {
-      //allowPublicKeyRetrieval: true,
+      allowPublicKeyRetrieval: true,
       timezone: 'Etc/GMT-2',
     },
     logging: false
