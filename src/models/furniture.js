@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false
     },
     color: {
@@ -45,8 +45,14 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     image_url: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.TEXT,
+      allowNull: false,
+      get() {
+        return this.getDataValue('image_url').split(',')
+      },
+      set(image_url) {
+        this.setDataValue('image_url', image_url.join())
+      }
     },
 
   }, {
