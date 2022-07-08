@@ -1,4 +1,4 @@
-const { Furniture } = require('../db/sequelize')
+const { Furniture } = require('../../db/sequelize')
 
 module.exports = (app) => {
   app.get('/api/furnitures/:id', (req, res) => {

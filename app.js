@@ -15,10 +15,16 @@ app.use(cors())
 sequelize.initDb()
 
 //points de terminaisons.
-require('./src/routes/findAllFurnitures')(app)
-require('./src/routes/findFurnituresbyPK')(app)
-require('./src/routes/updateFurniture')(app)
-require('./src/routes/createFurniture')(app)
-require('./src/routes/deleteFurniture')(app)
+require('./src/routes/routes_furniture/findAllFurnitures')(app)
+require('./src/routes/routes_furniture/findFurnituresbyPK')(app)
+require('./src/routes/routes_furniture/updateFurniture')(app)
+require('./src/routes/routes_furniture/createFurniture')(app)
+require('./src/routes/routes_furniture/deleteFurniture')(app)
+require('./src/routes/routes_user/findAllUsers')(app)
+require('./src/routes/routes_user/findUsersbyPK')(app)
+require('./src/routes/routes_user/updateUser')(app)
+require('./src/routes/routes_user/createUser')(app)
+require('./src/routes/routes_user/deleteUser')(app)
+
 
 app.listen(port, () => console.log(`Notre application Node est démarée sur http://localhost:${port}`))

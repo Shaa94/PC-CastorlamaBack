@@ -54,6 +54,11 @@ module.exports = (sequelize, DataTypes) => {
         this.setDataValue('image_url', image_url.join())
       }
     },
+    userId: {
+      type: DataTypes.INTEGER,
+      foreignKey: true,
+    },
+
 
   }, {
     timestamps: true,

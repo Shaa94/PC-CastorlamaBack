@@ -1,4 +1,4 @@
-const { Furniture } = require('../db/sequelize')
+const { Furniture } = require('../../db/sequelize')
 
 module.exports = (app) => {
   app.delete('/api/furnitures/:id', (req, res) => {
